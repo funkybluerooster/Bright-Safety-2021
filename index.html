@@ -27,6 +27,21 @@
 
     <!-- main style-->
     <link rel="stylesheet" href="vendor/css/style.css">
+    <!-- Meta -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="#">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Safety Driving School | Bright Driver">
+    <meta property="og:description" content="We offer professional and residential drivers an approved six-hour live classroom course.">
+    <meta property="og:url" content="#">
+    <meta property="og:site_name" content="Bright Driver Safety School">
+    <meta property="article:publisher" content="https://www.facebook.com/Bright-Driver-Safety-School-314182155453658/">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- <meta name="twitter:creator" content="@sparkdp">
+     <meta name="twitter:site" content="@sparkdp"> -->
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="100">
@@ -76,7 +91,7 @@
                             <span></span>
                             <span></span>
                         </div>
-                        <a class="navbar-brand d-block d-lg-none" href="#"><img src="vendor/img/bright-safety-logo.svg" alt="logo"></a>
+                        <a class="navbar-brand d-block d-lg-none" href="#"><img src="vendor/img/bright-safety-logo.svg" alt="logo" width="250px"></a>
                     </div>
                 </div>
             </div>
@@ -732,32 +747,92 @@
                 </div>
                 <div class="col-12 col-lg-6 contact-box text-center text-md-left ">
                     <div class="c-box wow fadeInRight ">
-                        <h4 class="small-heading ">Leave Message</h4>
-                        <form class="contact-form " method="POST" enctype="multipart/form-data" name="Bright Driver Safety School form">
-                            <div class="row my-form ">
-                                <div class="display-error "><span id="error "></span></div>
-                                <div class="col-12 col-md-6 ">
-                                    <input type="text " class="form-control " id="candidate_fname " name="candidate_fname " placeholder="First Name " required="required ">
-                                </div>
-                                <div class="col-12 col-md-6 ">
-                                    <input type="text " class="form-control " id="candidate_lname " name="candidate_lname " placeholder="Last Name " required="required ">
-                                </div>
-                                <div class="col-12 col-md-6 ">
-                                    <input type="email " class="form-control " id="user_email " name="user_email " placeholder="Email " required="required ">
-                                </div>
-                                <div class="col-12 col-md-6 ">
-                                    <input type="text " class="form-control " id="user_phone " name="user_phone " placeholder="Phone " required="required ">
-                                </div>
-                                <div class="col-12 ">
-                                    <textarea class="form-control " id="user_message " name="user_message " placeholder="Message " rows="7 " required="required "></textarea>
-                                </div>
-                                <div class="col-12 ">
-                                    <a href="javascript:void(0); " class="btn anim-btn rounded-pill user-contact " type="submit ">SUBMIT
-                                <span></span><span></span><span></span><span></span><span></span>
-                            </a>
-                                </div>
-                            </div>
-                        </form>
+
+                        <iframe id="JotFormIFrame-210334569252150" title="Bright Driver Safety Contact" onload="window.parent.scrollTo(0,0)" allowtransparency="true" allowfullscreen="true" allow="geolocation; microphone; camera" src="https://form.jotform.com/210334569252150"
+                            frameborder="0" style="
+                        min-width: 100%;
+                        height:539px;
+                        border:none;" scrolling="no">
+                      </iframe>
+                        <script type="text/javascript">
+                            var ifr = document.getElementById("JotFormIFrame-210334569252150");
+                            if (ifr) {
+                                var src = ifr.src;
+                                var iframeParams = [];
+                                if (window.location.href && window.location.href.indexOf("?") > -1) {
+                                    iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+                                }
+                                if (src && src.indexOf("?") > -1) {
+                                    iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+                                    src = src.substr(0, src.indexOf("?"))
+                                }
+                                iframeParams.push("isIframeEmbed=1");
+                                ifr.src = src + "?" + iframeParams.join('&');
+                            }
+                            window.handleIFrameMessage = function(e) {
+                                if (typeof e.data === 'object') {
+                                    return;
+                                }
+                                var args = e.data.split(":");
+                                if (args.length > 2) {
+                                    iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]);
+                                } else {
+                                    iframe = document.getElementById("JotFormIFrame");
+                                }
+                                if (!iframe) {
+                                    return;
+                                }
+                                switch (args[0]) {
+                                    case "scrollIntoView":
+                                        iframe.scrollIntoView();
+                                        break;
+                                    case "setHeight":
+                                        iframe.style.height = args[1] + "px";
+                                        break;
+                                    case "collapseErrorPage":
+                                        if (iframe.clientHeight > window.innerHeight) {
+                                            iframe.style.height = window.innerHeight + "px";
+                                        }
+                                        break;
+                                    case "reloadPage":
+                                        window.location.reload();
+                                        break;
+                                    case "loadScript":
+                                        var src = args[1];
+                                        if (args.length > 3) {
+                                            src = args[1] + ':' + args[2];
+                                        }
+                                        var script = document.createElement('script');
+                                        script.src = src;
+                                        script.type = 'text/javascript';
+                                        document.body.appendChild(script);
+                                        break;
+                                    case "exitFullscreen":
+                                        if (window.document.exitFullscreen) window.document.exitFullscreen();
+                                        else if (window.document.mozCancelFullScreen) window.document.mozCancelFullScreen();
+                                        else if (window.document.mozCancelFullscreen) window.document.mozCancelFullScreen();
+                                        else if (window.document.webkitExitFullscreen) window.document.webkitExitFullscreen();
+                                        else if (window.document.msExitFullscreen) window.document.msExitFullscreen();
+                                        break;
+                                }
+                                var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+                                if (isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+                                    var urls = {
+                                        "docurl": encodeURIComponent(document.URL),
+                                        "referrer": encodeURIComponent(document.referrer)
+                                    };
+                                    iframe.contentWindow.postMessage(JSON.stringify({
+                                        "type": "urls",
+                                        "value": urls
+                                    }), "*");
+                                }
+                            };
+                            if (window.addEventListener) {
+                                window.addEventListener("message", handleIFrameMessage, false);
+                            } else if (window.attachEvent) {
+                                window.attachEvent("onmessage", handleIFrameMessage);
+                            }
+                        </script>
                     </div>
                 </div>
             </div>
